@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
     public void update( int row, int col ) {
         int play = tttGame.play( row, col );
         if( play == 1 )
-            buttons[row][col].setText( "X" );
+            buttons[row][col].setText( "+" );
         else if( play == 2 )
-            buttons[row][col].setText( "O" );
+            buttons[row][col].setText( "-" );
         if( tttGame.isGameOver( ) ) {
             status.setBackgroundColor( Color.RED );
             enableButtons( false );
