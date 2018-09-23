@@ -43,9 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 buttons[row][col] = new Button( this );
                 buttons[row][col].setTextSize( ( int ) ( w * .2 ) );
                 buttons[row][col].setOnClickListener( bh );
+
                 int padding = 5;
-                buttons[row][col].setPadding(padding, padding, padding, padding );
+
                 gridLayout.addView( buttons[row][col], w - padding*2, w - padding*2);
+
+                GridLayout.LayoutParams btnLayout = buttons[row][col].getLayoutParams();
+
+                btnLayout.topMargin = padding;
+                btnLayout.bottomMargin = padding;
+                btnLayout.rightMargin = padding;
+                btnLayout.leftMargin = padding;
             }
         }
 
