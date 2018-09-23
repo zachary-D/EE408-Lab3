@@ -70,9 +70,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void update( int row, int col ) {
+        //Identify who's turn it is
         int play = tttGame.play( row, col );
+        //Set the clicked button to X if it is the first players' turn
         if( play == 1 )
             buttons[row][col].setText( "X" );
+        //Set the clicked button to O if it is the second players' turn
         else if( play == 2 )
             buttons[row][col].setText( "O" );
         if( tttGame.isGameOver( ) ) {
@@ -96,19 +99,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showNewGameDialog( ) {
+        //Create the alert
         AlertDialog.Builder alert = new AlertDialog.Builder( this );
+        //Set the properties & text of the alert
         alert.setTitle( "This is fun" );
         alert.setMessage( "Play again?" );
         PlayDialog playAgain = new PlayDialog( );
         alert.setPositiveButton( "YES", playAgain );
         alert.setNegativeButton( "NO", playAgain );
+        //Display the alert
         alert.show( );
     }
 
     private class ButtonHandler implements View.OnClickListener {
         public void onClick( View v ) {
+            //Loop through all the buttons to determine which button was pressed
             for( int row = 0; row < TicTacToe.SIDE; row ++ )
                 for( int column = 0; column < TicTacToe.SIDE; column++ )
+                    //Update the selected button
                     if( v == buttons[row][column] )
                         update( row, column );
         }
