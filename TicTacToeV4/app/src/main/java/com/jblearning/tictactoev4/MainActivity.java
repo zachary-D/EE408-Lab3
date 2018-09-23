@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         else if( play == 2 )
             buttons[row][col].setText( "-" );
         if( tttGame.isGameOver( ) ) {
-            status.setBackgroundColor( Color.RED );
+            status.setBackgroundColor( Color.YELLOW );
             enableButtons( false );
             status.setText( tttGame.result( ) );
             showNewGameDialog( );	// offer to play again
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 tttGame.resetGame( );
                 enableButtons( true );
                 resetButtons( );
-                status.setBackgroundColor( Color.GREEN );
+                status.setBackgroundColor( Color.BLUE );
                 status.setText( tttGame.result( ) );
             }
             else if( id == -2 ) // NO button
