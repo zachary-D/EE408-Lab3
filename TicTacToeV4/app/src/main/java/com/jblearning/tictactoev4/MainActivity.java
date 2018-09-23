@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showNewGameDialog( ) {
         AlertDialog.Builder alert = new AlertDialog.Builder( this );
-        alert.setTitle( "This is fun" );
+        alert.setTitle( "TicTacToe Game" );
         alert.setMessage( "Play again?" );
         PlayDialog playAgain = new PlayDialog( );
         alert.setPositiveButton( "YES", playAgain );
