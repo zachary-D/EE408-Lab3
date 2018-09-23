@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         // set up status' characteristics
         status.setWidth( TicTacToe.SIDE * w );
-        status.setHeight( w );
+        status.setHeight( w * 2);
         status.setGravity( Gravity.CENTER );
         status.setBackgroundColor( Color.GREEN );
         status.setTextSize( ( int ) ( w * .15 ) );
